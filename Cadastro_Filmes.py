@@ -18,27 +18,16 @@ def Operação_de_cadastro():
   nome_do_filme = input("Digite o nome do filme: ")
   genero_do_filme = input("DIgite o genero predominante do filme: ")
   
-  crescente = None
+
+  id_do_filme = 0
+  ordenar_obrigatória()
   
-  
-  if len(lista_dic)== 0:
-    crescente = True
-    id_do_filme = 0
-    ordenar_obrigatória()
-  elif lista_dic[0]["id"] == 0:
-    crescente = True
-    id_do_filme = 0
-    ordenar_obrigatória()
-  else:
-    crescente = False
-    id_do_filme = 0
-    ordenar_obrigatória()
 
   
    
   for i in range(len(lista_dic)):
     
-      if lista_dic[i]["id"] == id_do_filme or lista_dic[i]["id"] < id_do_filme :
+      if lista_dic[i]["id"] == id_do_filme or lista_dic[i]["id"]  < id_do_filme  :
         id_do_filme = id_do_filme+1 
   
 
@@ -271,12 +260,12 @@ def menu_de_operação():
   esc_usuario = 200
   while esc_usuario < 0 or esc_usuario > 4:
     print()
-    print("Operacao_de_cadastro digite 0")
-    print("Operacao_de_listagem digite 1")
-    print("Operacao_de_busca digite 2")
-    print("Operacao_de_remoção digite 3")
+    print("Operação_de_cadastro digite 0")
+    print("Operação_de_listagem digite 1")
+    print("Operação_de_busca digite 2")
+    print("Operação_de_remoção digite 3")
     print("Operação_de_ordenação digite 4")
-    print("Finalisar digite 5")
+    print("Finalizar digite 5")
     print()
 
     try:
